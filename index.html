@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/jpeg" href="assets/karan-headshot.jpg?v=2">
+<link rel="icon" type="image/jpeg" href="assets/karan-headshot.jpg?v=6">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#f6f9ff">
+<meta name="theme-color" content="#f8fafb">
 <meta name="description" content="Karan Khera's note to Izzy and Ali about the CreatorGrid Founder's Associate role: four reasons, three case studies and notes from colleagues.">
 <meta property="og:title" content="For Izzy & Ali | Karan Khera × CreatorGrid">
 <meta property="og:description" content="Why I think I could be useful to the CreatorGrid team. Three projects and the people behind the work.">
@@ -12,7 +12,7 @@
 <title>For Izzy & Ali | Karan Khera — CreatorGrid</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&amp;display=swap" rel="stylesheet">
 <style>
 :root{--blue:#2459a8;--navy:#142f58;--ink:#1a2d48;--text:#334b68;--muted:#637894;--line:#dbe5f1;--wash:#f7faff;--lighter:#edf4ff;--white:#fff;--serif:'Instrument Serif',Georgia,'Times New Roman',serif;--sans:'DM Sans',Inter,system-ui,-apple-system,'Segoe UI',sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--wash);font:500 17px/1.68 var(--sans);-webkit-font-smoothing:antialiased}a{color:var(--blue);text-underline-offset:4px}a:hover{text-decoration-thickness:2px}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible{outline:3px solid #3177de;outline-offset:4px;border-radius:3px}::selection{background:#c8deff}
@@ -98,8 +98,10 @@
 @media(max-width:640px){.brand{font-size:16px}.nav{gap:12px}.nav a{font-size:12px}.nav a:nth-child(1){display:none}.intro{font-size:18px}.reason-card h3{font-size:18px}.reason-card p{font-size:14px}.project-category{font-size:10px}.project-description{font-size:14px}}
 @media(max-width:360px){.brand{font-size:14px}.nav a:nth-child(3){display:none}}
 </style>
+<link rel="stylesheet" href="site-design.css">
+<script>if(window.parent!==window)document.documentElement.classList.add("embedded-page");</script>
 </head>
-<body>
+<body class="portfolio-home">
 <div class="wide"><header class="site-header">
 <a class="brand" href="#top" aria-label="Back to the top of Karan's page"><span class="brand-photo" aria-hidden="true" title="Karan Khera"><img src="assets/karan-headshot.jpg" alt="" width="40" height="40"></span><span>Karan Khera</span></a>
 <nav class="nav" aria-label="On this page"><a href="#why">Why me</a><a href="#work">Selected work</a><a href="#notes">Social proof</a><a class="nav-contact" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=karanskhera%40gmail.com&amp;su=CreatorGrid%20Founders%20Associate%20%E2%80%93%20hello" target="_blank" rel="noopener noreferrer">Email Karan ↗</a></nav>
@@ -218,6 +220,7 @@
 })();
 
 (function(){
+  if(window.parent!==window)return;
   const dock=document.getElementById('music-dock');
   const audio=document.getElementById('cafe-music');
   const btn=document.getElementById('music-toggle');
@@ -336,4 +339,5 @@
   reduce.addEventListener?.('change',()=>{if(reduce.matches){cancelAnimationFrame(raf);drawIdle();}else if(!audio.paused)draw();});
 })();
 </script>
+<script src="site-navigation.js"></script>
 </body></html>

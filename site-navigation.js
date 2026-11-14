@@ -36,6 +36,13 @@
   }
 
   const hostPath = normalized(location.pathname);
+  // Keep relative assets/links anchored to the document originally loaded, even while
+  // pushState changes the visible address to the active case-study route.
+  if (!document.querySelector('base')) {
+    const stableBase = document.createElement('base');
+    stableBase.href = location.origin + hostPath;
+    document.head.prepend(stableBase);
+  }
   const originalTitle = document.title;
   const frame = document.createElement('iframe');
   frame.className = 'portfolio-route-frame';

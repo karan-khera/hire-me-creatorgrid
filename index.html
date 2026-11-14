@@ -310,7 +310,7 @@
   audio.addEventListener('pause',()=>setPlaying(false));
   audio.addEventListener('timeupdate',()=>{const t=audio.duration?audio.currentTime/audio.duration*100:0;progress.style.width=t+'%';});
   audio.addEventListener('error',()=>{meta.textContent='Audio unavailable';status.textContent='Audio could not be loaded';setPlaying(false);});
-  document.addEventListener('visibilitychange',()=>{if(document.hidden&&!audio.paused)audio.pause();});
+  // Keep music playing when the visitor switches tabs; play and pause remain user-controlled.
   reduce.addEventListener?.('change',()=>{if(reduce.matches){cancelAnimationFrame(raf);drawIdle();}else if(!audio.paused)draw();});
 })();
 </script>

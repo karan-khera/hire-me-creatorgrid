@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f8f7f4">
+<meta name="description" content="A Monzy case study by Karan Khera: how research shaped a pragmatic credit-card recommendation MVP, a structured 500+ card foundation and commercial readiness.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Monzy case study | Karan Khera">
+<meta property="og:description" content="How I validated a credit-card discovery opportunity, recommended a questionnaire-led MVP, and built the 500+ card data and decision foundation.">
+<!-- KARAN: Set og:image to an absolute URL of a real 1200 x 630 cover image after hosting. Omitted until available to avoid broken LinkedIn previews. -->
+<meta name="twitter:card" content="summary_large_image">
+<title>Monzy — From research to a testable product strategy | Karan Khera</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8f7f4;--ink:#202b29;--body:#3f4945;--muted:#68736d;--line:#d9ded8;--green:#285e4b;--green-light:#eef5ef;--white:#fff;--serif:Georgia,'Times New Roman',serif;--sans:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.72 var(--sans);-webkit-font-smoothing:antialiased}
+::selection{background:#d4e8d9}
+a{color:var(--green);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}
+button{font:inherit}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #5b917b;outline-offset:4px}
+.sitebar{height:66px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0 5.1%;border-bottom:1px solid var(--line);background:var(--bg)}
+.sitebar strong{font-size:13px;letter-spacing:-.01em}.sitebar span{font-size:11px;letter-spacing:.08em;color:var(--muted);text-transform:uppercase}
+.rail{position:fixed;top:103px;left:max(18px,calc((100vw - 1430px)/2));width:222px;max-height:calc(100dvh - 125px);overflow:auto;padding:0 18px 16px 0;scrollbar-width:thin;border-right:1px solid var(--line);z-index:10}
+.rail-title{font-size:10px;text-transform:uppercase;letter-spacing:.13em;color:var(--muted);font-weight:700;margin:2px 0 18px}
+.rail a{display:flex;align-items:baseline;gap:12px;color:#69736f;text-decoration:none;font-size:12px;line-height:1.35;padding:11px 9px;border-radius:4px;transition:color .12s,background .12s}
+.rail a .nav-index{font-size:10px;letter-spacing:.04em;color:#909992;min-width:18px;font-variant-numeric:tabular-nums}
+.rail a.active{color:var(--green);background:#e9f0eb;font-weight:700}
+.rail a.active .nav-index{color:var(--green)}
+.rail-group{padding:18px 9px 7px;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-top:1px solid var(--line);margin-top:9px}
+.rail-progress{height:2px;background:#e1e4de;margin:21px 9px}.rail-progress span{display:block;height:100%;background:var(--green);width:0;transition:width .15s}
+.page{max-width:1000px;padding:0 32px 118px;margin-left:max(282px,calc((100vw - 1430px)/2 + 278px))}
+.prose{max-width:760px}
+.hero{padding-top:92px;padding-bottom:87px}
+.eyebrow{font-size:11px;letter-spacing:.14em;font-weight:750;text-transform:uppercase;color:var(--green)}
+h1,h2,h3,p{margin-top:0}
+h1{font:normal clamp(46px,5.8vw,74px)/1.105 var(--serif);letter-spacing:-.048em;margin:23px 0 26px;max-width:820px}
+.dek{font-size:clamp(17px,1.85vw,21px);line-height:1.65;max-width:715px;color:var(--body);margin-bottom:33px}
+.context{display:flex;flex-wrap:wrap;gap:9px 27px;font-size:12px;color:var(--muted);padding:22px 0 26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.context strong{color:var(--ink);font-weight:650;display:block;font-size:13px}
+.context span{min-width:130px}
+.executive{padding-top:33px;max-width:720px}
+.executive .eyebrow{margin-bottom:12px}
+.executive p{color:var(--body);font-size:16px;line-height:1.82;margin-bottom:0}
+.executive strong{color:var(--ink)}
+section.act,.outro{padding-top:55px;padding-bottom:75px;border-top:1px solid var(--line);scroll-margin-top:28px}
+.chapter{display:flex;align-items:baseline;gap:16px;color:var(--green);font-size:11px;font-weight:750;letter-spacing:.13em;text-transform:uppercase;margin-bottom:26px}
+.chapter .n{font-size:19px;letter-spacing:-.04em;font-family:var(--serif);font-weight:400}
+h2{font:normal clamp(35px,4.2vw,52px)/1.17 var(--serif);letter-spacing:-.034em;margin-bottom:22px;max-width:740px}
+h3{font-weight:650;letter-spacing:-.027em;font-size:19px;line-height:1.36;margin-bottom:9px}
+.body{font-size:16px;line-height:1.86;color:var(--body);max-width:720px}
+.body p{margin-bottom:17px}.body strong{color:var(--ink);font-weight:650}
+.body a{font-weight:600}
+.text-lead{font-size:18px;line-height:1.75;color:var(--body);max-width:720px;margin-bottom:28px}
+.rule-note{border-left:2px solid var(--green);padding:3px 0 3px 21px;margin:30px 0 2px;max-width:705px}
+.rule-note .caption{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--green);font-weight:750;margin-bottom:6px}
+.rule-note p{font:normal 20px/1.55 var(--serif);letter-spacing:-.01em;margin:0}
+.evidence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0 24px;margin:28px 0 32px;max-width:730px}
+.evidence .stat{font:normal 35px/1.2 var(--serif);letter-spacing:-.04em;color:var(--ink)}
+.evidence .stat-label{font-size:12px;line-height:1.5;color:var(--muted);margin-top:5px}
+.subsection{font-size:10px;color:var(--green);font-weight:750;text-transform:uppercase;letter-spacing:.13em;margin:40px 0 9px}
+.finding{display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px;border-top:1px solid var(--line);padding:21px 0;max-width:720px}
+.finding:last-child{border-bottom:1px solid var(--line)}
+.finding .index{font:normal 17px/1.4 var(--serif);color:var(--green)}
+.finding h3{font-size:17px;margin-bottom:5px}
+.finding p{color:var(--body);font-size:14px;line-height:1.72;margin:0}
+.finding em{font-style:normal;font-weight:650;color:var(--ink)}
+.footnote{font-size:12px;line-height:1.7;color:var(--muted);max-width:720px;margin:18px 0 0}
+.matrix{margin:32px 0 20px;max-width:760px;border-top:1px solid var(--ink)}
+.matrix-head{display:grid;grid-template-columns:95px minmax(172px,1fr) 1.35fr;gap:10px;padding:11px 12px;border-bottom:1px solid var(--line);font-size:10px;text-transform:uppercase;letter-spacing:.11em;color:var(--muted)}
+.matrix-row{display:grid;grid-template-columns:95px minmax(172px,1fr) 1.35fr;gap:10px;align-items:start;padding:17px 12px;border-bottom:1px solid var(--line);font-size:13px;line-height:1.58}
+.matrix-row b{font-size:14px;line-height:1.45}.matrix-row .rank{font-size:11px;color:var(--muted);font-weight:700;padding-top:3px}
+.matrix-row .trade{color:var(--body)}
+.matrix-row.chosen{background:var(--green-light)}
+.matrix-row.chosen .rank{color:var(--green)}
+.matrix-row.chosen b{color:var(--green)}
+.chosen-label{display:inline-block;color:#1a6546;background:#d9edde;border-radius:3px;font-size:10px;font-weight:750;padding:2px 6px;margin-top:5px;letter-spacing:.015em}
+.steps{margin:33px 0 23px;max-width:720px;border-top:1px solid var(--line)}
+.step-row{padding:21px 0;display:grid;grid-template-columns:45px minmax(0,1fr);gap:10px;border-bottom:1px solid var(--line)}
+.step-row .ordinal{font:normal 23px/1.2 var(--serif);color:var(--green)}
+.step-row h3{font-size:17px;margin-bottom:4px}
+.step-row p{font-size:14px;line-height:1.75;color:var(--body);margin:0}
+.interactive{max-width:760px;margin-top:36px;border:1px solid #cfd8d0;background:#fefefd}
+.interactive>summary{display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;list-style:none;padding:18px 21px;color:var(--ink);font-size:13px;font-weight:700}
+.interactive>summary::-webkit-details-marker{display:none}
+.interactive>summary .expand-label{color:var(--green);font-size:17px;line-height:1}
+.interactive[open]>summary .expand-label{transform:rotate(45deg)}
+.interactive-inner{padding:23px 24px 29px;border-top:1px solid var(--line)}
+.interactive-inner>.small{font-size:12px;color:var(--muted);line-height:1.65;margin:0 0 17px}
+.demo-top{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:11px;color:var(--green);font-weight:700;margin-bottom:22px}
+.progressline{height:3px;background:#e5e9e5;margin:-9px 0 24px}.progressline span{display:block;height:100%;background:var(--green);width:20%;transition:width .2s}
+.demo-q{font:normal 27px/1.25 var(--serif);margin:0 0 8px}
+.demo-hint{font-size:13px;color:var(--muted);margin-bottom:19px}
+.demo-choices{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.choice{cursor:pointer;text-align:left;padding:13px 15px;background:var(--white);border:1px solid #d4dcd5;border-radius:3px;min-height:68px;color:var(--ink);transition:border .12s,background .12s}
+.choice strong{display:block;font-size:13px;font-weight:700;line-height:1.3}
+.choice span{display:block;color:var(--muted);font-size:11px;margin-top:5px;line-height:1.35}
+.choice[aria-pressed=true]{background:#eff6f0;border:2px solid var(--green);padding:12px 14px}
+.demo-actions{display:flex;align-items:center;justify-content:space-between;margin-top:20px;gap:12px}
+.demo-actions button{border:1px solid var(--ink);background:var(--ink);color:white;cursor:pointer;padding:10px 17px;border-radius:3px;font-size:12px;font-weight:700}
+.demo-actions button.secondary{border:none;background:transparent;color:var(--ink);padding-left:0}
+.demo-actions button:disabled{opacity:.35;cursor:not-allowed}
+.summary-list{padding:0;margin:19px 0 0;list-style:none;border-top:1px solid var(--line)}
+.summary-list li{border-bottom:1px solid var(--line);padding:7px 0;font-size:13px;color:var(--body)}
+.link-grid{border-top:1px solid var(--line);margin-top:28px;max-width:720px}
+.link-row{padding:20px 0;border-bottom:1px solid var(--line)}
+.link-row h3{margin-bottom:6px;font-size:18px}.link-row p{color:var(--body);font-size:14px;line-height:1.78;margin:0}
+.conclusion-line{border-top:1px solid var(--line);padding-top:24px;margin-top:29px;font-size:13px;color:var(--muted);line-height:1.7;max-width:720px}
+.outro{padding-bottom:45px}.outro .closing{font:normal 25px/1.5 var(--serif);max-width:680px;margin-top:21px;color:var(--ink)}
+.lastlinks{display:flex;gap:20px;flex-wrap:wrap;font-size:13px;font-weight:650;margin-top:40px;padding-top:18px;border-top:1px solid var(--line)}
+@media(max-width:1080px){.rail{left:14px;width:181px}.page{margin-left:218px;max-width:none;padding-right:30px;padding-left:16px}.rail a{gap:7px;padding:10px 6px}}
+@media(max-width:675px){.sitebar{padding:0 15px;height:58px}.sitebar span{font-size:9px}.rail{left:5px;top:79px;width:53px;max-height:calc(100dvh - 94px);padding-right:5px}.rail-title{display:none}.rail a{justify-content:center;align-items:center;padding:12px 1px;font-size:0;min-height:43px}.rail a .nav-index{font-size:11px;min-width:0}.rail-group{font-size:8px;padding:14px 0 8px;text-align:center}.rail-progress{margin:15px 5px}.page{margin-left:66px;padding-left:12px;padding-right:15px;padding-bottom:60px}.hero{padding-top:57px;padding-bottom:57px}h1{font-size:clamp(34px,7.7vw,50px);letter-spacing:-.042em}.dek{font-size:16px}.context{gap:12px 20px}.context span{min-width:100px;font-size:11px}.context strong{font-size:12px}section.act,.outro{padding-top:40px;padding-bottom:55px}h2{font-size:clamp(30px,6vw,40px)}.text-lead{font-size:16px}.body{font-size:15px;line-height:1.78}.evidence{gap:10px}.evidence .stat{font-size:27px}.evidence .stat-label{font-size:10px}.chapter{margin-bottom:20px}.matrix-head{display:none}.matrix-row{grid-template-columns:1fr;gap:2px;padding:14px 8px}.matrix-row .rank{font-size:10px}.matrix-row .trade{font-size:12px}.interactive-inner{padding:18px 13px}.interactive>summary{padding:14px}.demo-choices{grid-template-columns:1fr}.rule-note p{font-size:19px}.link-row p{font-size:13px}}
+@media(max-width:380px){.rail{width:44px}.page{margin-left:54px;padding-left:11px;padding-right:11px}.rail a{min-height:40px}.sitebar strong{font-size:11px;white-space:nowrap}.sitebar span{font-size:9px}h1{font-size:32px}h2{font-size:29px}.evidence{grid-template-columns:1fr;gap:12px}.evidence .stat{font-size:29px}.context{display:grid;grid-template-columns:1fr 1fr}.step-row{grid-template-columns:27px 1fr;gap:6px}.finding{grid-template-columns:23px 1fr;gap:8px}.rule-note{padding-left:13px}}
+@media(max-width:675px){.rail{display:none}.page{margin-left:0;padding-left:16px;padding-right:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.progressline span,.rail-progress span{transition:none}}
+
+.site-cta{margin-top:14px;padding:20px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:18px;max-width:760px}
+.site-cta strong,.site-cta span{display:block}.site-cta strong{font-size:14px;font-weight:700}.site-cta span{color:var(--muted);font-size:12px;margin-top:3px}
+.cta-button{display:inline-flex;align-items:center;justify-content:center;gap:9px;background:var(--green);color:white;text-decoration:none;padding:12px 18px;border-radius:3px;font-size:13px;font-weight:700;white-space:nowrap;flex-shrink:0}
+.cta-button:hover{color:white;background:#1e4938}
+.cta-button span{display:inline;color:inherit;margin:0;font-size:14px}
+.card-examples{margin-top:22px;border-top:1px solid var(--line);padding-top:20px}
+.card-examples h4{margin:0 0 4px;font-size:15px;letter-spacing:-.02em}
+.card-examples .card-subtext{font-size:12px;line-height:1.65;color:var(--muted);margin:0 0 15px}
+.card-example-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.card-example{border:1px solid var(--line);background:#fff;padding:14px 12px;min-height:106px}
+.card-example strong{display:block;font-size:13px;line-height:1.35;color:var(--ink)}
+.card-example span{display:block;font-size:11px;line-height:1.45;color:var(--muted);margin-top:6px}
+/* Pending interview count and QA examples require source confirmation; see TODOs in HTML. */
+
+
+/* Portfolio identity and chapter hierarchy */
+.sitebar .site-wordmark{font-size:15px;font-weight:750;letter-spacing:-.035em;color:var(--ink);text-decoration:none}
+.sitebar .site-links{display:flex;align-items:center;gap:24px}
+.sitebar .site-links a{font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--body);text-decoration:none}
+.sitebar .site-links a:hover{color:var(--green);text-decoration:underline}
+@media(max-width:675px){.card-example-list{grid-template-columns:1fr}.card-example{min-height:0}.site-cta{align-items:flex-start;flex-direction:column}.cta-button{width:100%}}
+.hero-category{display:flex;align-items:baseline;gap:12px}
+.hero-category .hero-kicker{font-size:10px;font-weight:600;letter-spacing:.11em;color:var(--muted)}
+.hero-category .hero-project{font-size:12px;font-weight:800;letter-spacing:.11em;color:var(--green)}
+.evidence{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px}
+@media(max-width:675px){.sitebar .site-links{gap:16px}.sitebar .site-links a{font-size:11px}.evidence{gap:18px}}
+@media(max-width:380px){.evidence{grid-template-columns:repeat(2,minmax(0,1fr))}.evidence .stat{font-size:27px}.evidence .stat-label{font-size:11px}}
+
+</style>
+<style id="portfolio-nav-style">
+    .portfolio-case-header{height:66px;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:0 max(24px,5.1%);background:#f4f7fc;border-bottom:1px solid #d7e3f2;color:#193a66;font-family:Inter,system-ui,sans-serif;font-size:12px;position:relative;z-index:50}
+    .portfolio-case-header a{color:#214c89;text-decoration:none;font-weight:650;white-space:nowrap}
+    .portfolio-case-header a:hover{text-decoration:underline;text-underline-offset:4px}
+    .portfolio-case-name{display:flex;align-items:center;gap:7px;color:#536e90;font-size:12px;white-space:nowrap}
+    .portfolio-case-name b{color:#214c89;letter-spacing:.06em;font-weight:700}
+    .portfolio-case-actions{display:flex;gap:13px;align-items:center;justify-content:flex-end;min-width:145px}
+    .portfolio-back{min-width:145px}.back-short{display:none}
+    .portfolio-case-actions .case-switch-space{display:block;width:35px}
+    .portfolio-case-header .case-divider{color:#9bb2cf}
+    @media(max-width:675px){.portfolio-case-header{height:58px;padding:0 13px;font-size:10px;gap:8px}.portfolio-case-name{font-size:10px;gap:4px}.portfolio-case-name .case-name{display:none}.portfolio-case-actions{min-width:0;gap:9px}.portfolio-case-actions .case-switch-space{display:none}.portfolio-back{min-width:0}.back-long{display:none}.back-short{display:inline}}
+    @media(max-width:350px){.portfolio-case-name .case-divider{display:none}.portfolio-case-actions{gap:7px}}
+    </style></head>
+<body>
+<header class="portfolio-case-header" aria-label="Portfolio navigation">
+      <a class="portfolio-back" href="../#work" aria-label="Back to selected work">← <span class="back-long">All projects</span><span class="back-short">Projects</span></a>
+      <span class="portfolio-case-name"><b>03 / 03</b><span class="case-divider">·</span><span class="case-name">Product Strategy</span></span>
+      <nav class="portfolio-case-actions" aria-label="Between case studies"><a class="case-switch" href="../revenue-growth/" aria-label="Previous case study: Revenue Growth">← Previous</a><a class="case-switch" href="../#work">All projects ↗</a></nav>
+    </header>
+
+<nav class="rail" id="rail" aria-label="Page navigation">
+<div class="rail-title">In this case study</div>
+<a href="#intro" data-track="intro" class="active" aria-label="Intro"><span class="nav-index" aria-hidden="true"></span><span class="nav-text">Intro</span></a>
+<div class="rail-group">Five acts</div>
+<a href="#act-1" data-track="act-1" aria-label="Act 1: Frame the opportunity"><span class="nav-index">01</span><span class="nav-text">Frame the opportunity</span></a>
+<a href="#act-2" data-track="act-2" aria-label="Act 2: Find the evidence"><span class="nav-index">02</span><span class="nav-text">Find the evidence</span></a>
+<a href="#act-3" data-track="act-3" aria-label="Act 3: Choose the MVP"><span class="nav-index">03</span><span class="nav-text">Choose the MVP</span></a>
+<a href="#act-4" data-track="act-4" aria-label="Act 4: Build the foundation"><span class="nav-index">04</span><span class="nav-text">Build the foundation</span></a>
+<a href="#act-5" data-track="act-5" aria-label="Act 5: Prepare to reach users"><span class="nav-index">05</span><span class="nav-text">Prepare to reach users</span></a>
+<div class="rail-group"></div>
+<a href="#outro" data-track="outro" aria-label="Outro"><span class="nav-index" aria-hidden="true"></span><span class="nav-text">Outro</span></a>
+<div class="rail-progress" aria-hidden="true"><span id="read-progress"></span></div>
+</nav>
+<main class="page">
+<section id="intro" class="hero" aria-labelledby="hero-title">
+ <div class="eyebrow hero-category"><span class="hero-kicker">Case study</span><span class="hero-project">Monzy</span></div>
+ <h1 id="hero-title">Helping people pick a credit card, instead of being sold one.</h1>
+ <p class="dek">How I tested the premise behind a new credit-card discovery business, recommended a practical first product, and built the data and decision logic to support it.</p>
+ <div class="context"><span><strong>Monzy</strong>Early-stage personal finance</span><span><strong>June–November 2025</strong>Product discovery engagement</span><span><strong>My role</strong>Product strategy consultant</span></div>
+ <div class="executive"><div class="eyebrow">The story in brief</div><p>Our hypothesis was that credit-card discovery could start with a person's needs instead of issuer promotion. <strong>I validated the opportunity, built the case for a questionnaire-led MVP, and developed the 500+ card database and initial decision logic.</strong> Over six months, we also established a live content presence and progressed commercial infrastructure discussions. Together, these created a concrete foundation for the first product.</p></div>
+</section>
+
+<section id="act-1" class="act" aria-labelledby="h-act-1">
+ <div class="chapter"><span class="n">01</span><span>Frame the opportunity</span></div>
+ <h2 id="h-act-1">The starting question was about trust, not card inventory.</h2>
+ <div class="body"><p>Credit-card discovery in India is often shaped by sales incentives: a bank representative promotes a product, a comparison site ranks popular offers, or someone takes a friend's recommendation. None necessarily begins with how the person will use the card.</p><p>Our hypothesis was that discovery could work in reverse. Start with eligibility, spending habits and preferences; then identify relevant options and explain the trade-offs. The project would sit within Ankur Warikoo's existing company. Ankur is one of India's leading finance creators, but the long-term ambition was to build a standalone business with an independent brand.</p><p><strong>My mandate had three parts: identify and validate the gap, assess whether it could support a viable business, and determine what we could credibly build first.</strong> That meant customer and competitive research, product scoping, data design and early commercial feasibility.</p></div>
+</section>
+
+<section id="act-2" class="act" aria-labelledby="h-act-2">
+ <div class="chapter"><span class="n">02</span><span>Find the evidence</span></div>
+ <h2 id="h-act-2">People didn't need another list of cards. They needed help deciding.</h2>
+ <p class="text-lead">I combined user interviews with competitive research to understand where existing card-discovery journeys fell short and what Monzy could do differently.</p>
+ <div class="evidence" aria-label="Research scope"><div><div class="stat">20</div><div class="stat-label">User interviews, personally conducted</div></div><div><div class="stat">16</div><div class="stat-label">Competitors studied and mapped in depth</div></div></div>
+ <div class="subsection">Three findings that changed the product brief</div>
+ <div class="finding"><div class="index">1</div><div><h3>Recommendations often ignored individual fit.</h3><p>People acquired cards through familiar or convenient channels, then discovered that benefits didn't match their spending. <em>Implication:</em> ask about eligibility, real usage and priorities before generating a shortlist.</p></div></div>
+ <div class="finding"><div class="index">2</div><div><h3>Trust depended on explaining the recommendation.</h3><p>Opaque rankings and sales-led advice made it hard to distinguish suitability from commission. <em>Implication:</em> make card attributes comparable and explain the reasons behind a recommendation.</p></div></div>
+ <div class="finding"><div class="index">3</div><div><h3>Research was fragmented across too many sources.</h3><p>Users assembled information from issuers, peers and online communities. <em>Implication:</em> build a reliable common card dataset and publish useful content that earns attention independently.</p></div></div>
+
+</section>
+
+<section id="act-3" class="act" aria-labelledby="h-act-3">
+ <div class="chapter"><span class="n">03</span><span>Choose the MVP</span></div>
+ <h2 id="h-act-3">The best data source wasn't the best place to start.</h2>
+ <div class="body"><p>Personalisation needed information about spending and preferences. I evaluated four ways to capture it, comparing the value of each method with the effort, permissions and friction it introduced.</p><p>Our initial team ranking put <strong>Account Aggregator first</strong>. It offered richer financial signals but required regulated access, integration and consent flows—dependencies that could delay an initial launch by six months or more.</p></div>
+ <div class="matrix" role="table" aria-label="Personalisation approaches and ranking">
+  <div class="matrix-head" role="row"><span role="columnheader">Team rank</span><span role="columnheader">Approach</span><span role="columnheader">Practical trade-off</span></div>
+  <div class="matrix-row" role="row"><div class="rank" role="cell">01</div><b role="cell">Account Aggregator</b><div class="trade" role="cell">Rich spending signals; regulatory and integration dependencies.</div></div>
+  <div class="matrix-row chosen" role="row"><div class="rank" role="cell">02<br><span class="chosen-label">Chosen for MVP</span></div><b role="cell">Preference questionnaire</b><div class="trade" role="cell">Less automatic detail, but fast to test without access to financial accounts.</div></div>
+  <div class="matrix-row" role="row"><div class="rank" role="cell">03</div><b role="cell">Email / SMS</b><div class="trade" role="cell">Potential transaction signals; permissions, coverage and trust concerns.</div></div>
+  <div class="matrix-row" role="row"><div class="rank" role="cell">04</div><b role="cell">Statement upload</b><div class="trade" role="cell">Detailed records; sensitive and cumbersome for a first interaction.</div></div>
+ </div>
+ <div class="rule-note"><div class="caption">My recommendation</div><p>Launch with a short, high-signal questionnaire. Learn whether users value the recommendations before investing in a complex financial-data integration.</p></div>
+ <div class="body" style="margin-top:25px"><p>We aligned on the questionnaire-first route while leaving richer transaction data as a potential later capability. We would still personalise. We chose a version we could test in weeks rather than months.</p></div>
+</section>
+
+<section id="act-4" class="act" aria-labelledby="h-act-4">
+ <div class="chapter"><span class="n">04</span><span>Build the foundation</span></div>
+ <h2 id="h-act-4">A simple questionnaire still needs a serious engine behind it.</h2>
+ <p class="text-lead">The questionnaire was only the front end. Behind it, I had to make thousands of card attributes consistent, decide which ones mattered to users, and establish the quality checks needed before engineering could build on the data.</p>
+ <div class="steps">
+  <div class="step-row"><div class="ordinal">1</div><div><h3>Build a comparable card database.</h3><p>I structured <strong>500+ credit cards</strong> with roughly <strong>50–60 data points each</strong>, creating a working base of approximately <strong>30,000 card-level data points</strong>. Fees, eligibility, reward rules, networks, benefits and exclusions were standardised so cards could be compared on the same terms.</p></div></div>
+  <div class="step-row"><div class="ordinal">2</div><div><h3>Design the decision and interface hierarchy.</h3><p>I prioritised the fields that mattered most to a user's decision: eligibility, spending use case, fees, reward value and restrictions. I mapped them into questionnaire flows, filters and an initial rules-based decision tree, so the interface could explain <em>why</em> a card might fit rather than display a long list of attributes.</p></div></div>
+  <div class="step-row"><div class="ordinal">3</div><div><h3>Establish a QA/QC gate for engineering.</h3><p>I defined a review process to check field completeness, reconcile values with issuer terms, test consistency between similar cards and flag ambiguous benefit conditions. Decision-critical fields and unresolved exceptions were tracked for review before engineering sign-off. The aim was a dependable data specification and clear recommendation logic, not just a populated spreadsheet.</p></div></div>
+ </div>
+ <div class="body"><p>We tested sample questionnaire responses against the database manually to examine how the filters and rules behaved. The output was a structured information base, an initial decision model and a documented approach to checking data quality before implementation.</p></div>
+ <details class="interactive" id="walkthrough"><summary><span>Explore an illustrative recommendation system</span><span class="expand-label" aria-hidden="true">+</span></summary>
+  <div class="interactive-inner"><p class="small">An interactive reconstruction of the preference logic, not Monzy's released interface or a financial recommendation. The categories are informed by Monzy's discovery journey; no real cards are ranked.</p>
+   <div class="demo-top"><span id="demo-step">QUESTION 1 OF 5</span><span id="demo-status">Preferences</span></div><div class="progressline" aria-hidden="true"><span id="demo-fill"></span></div>
+   <div aria-live="polite" id="demo-question"></div>
+   <div class="demo-actions"><button type="button" class="secondary" id="demo-prev">← Back</button><button type="button" id="demo-next" disabled>Continue →</button></div>
+  </div>
+ </details>
+  <div class="site-cta"><div><strong>Want to see the product?</strong><span>Try Monzy's live recommendation journey.</span></div><a class="cta-button" href="https://monzy.co/" target="_blank" rel="noopener noreferrer">Visit Monzy <span aria-hidden="true">↗</span></a></div>
+ </section>
+
+<section id="act-5" class="act" aria-labelledby="h-act-5">
+ <div class="chapter"><span class="n">05</span><span>Prepare to reach users</span></div>
+ <h2 id="h-act-5">A recommendation product also needed distribution and partners.</h2>
+ <p class="text-lead">Distribution had two distinct workstreams: SEO content designed to earn search traffic, and YouTube experiments designed to learn what audiences responded to. I helped set content priorities and owned the accuracy of credit-card information published through both channels.</p>
+ <div class="link-grid">
+  <div class="link-row"><h3>SEO: identify content that could earn organic discovery.</h3><p>We launched a landing page and an SEO-led blog ahead of the recommendation experience. I helped identify high-intent questions, comparisons and card use cases worth covering, and validated the figures, issuer terms and benefit explanations in published content. The SEO lead owned article creation, technical optimisation and publishing execution.</p></div>
+  <div class="link-row"><h3>YouTube: experiment with topics and audience response.</h3><p>We tested independent credit-card videos to see which subjects resonated without promotion from the founder's audience. The YouTube lead owned video concepts, hooks, scripts and production; I reviewed the accuracy of card claims, reward calculations and use-case examples before content went out.</p></div>
+  <div class="link-row"><h3>Commercial feasibility: evaluate potential partners.</h3><p>I led discussions and analysis with issuers, aggregators and infrastructure providers, covering API access, integration feasibility and potential referral economics. This helped define how the product could connect recommendations to a sustainable commercial model.</p></div>
+ </div>
+ <div class="rule-note"><div class="caption">The commercial guardrail</div><p>Recommend the best-fit card even when the platform earns no commission.</p></div>
+</section>
+
+<section id="outro" class="outro" aria-labelledby="outro-title">
+ <div class="chapter"><span class="n">—</span><span>Outro</span></div>
+ <h2 id="outro-title">What we built, and what I learned.</h2>
+ <div class="body"><p>During my stint, I helped move Monzy from our initial hypothesis to a concrete product direction: evidence of user needs, a viable first journey, a structured 500+ card knowledge base, preliminary recommendation rules, live educational content and progress on commercial infrastructure.</p><p><strong>The next build priorities:</strong> turn the manual recommendation tests into an automated matching journey, and connect users to relevant application flows.</p><p><strong>Early organic traction:</strong> In the first two weeks following launch, around 5,000 people went through Monzy’s discovery funnel through organic channels, without promotion by Ankur or other creators. Around one in five visitors came through AI-assisted discovery, including search and assistant citations. These were encouraging early signals for the SEO content framework we had put in place.</p><p><strong>What I'd change:</strong> my initial decision tree was too rigid for overlapping user preferences. When that assumption was challenged, it became clear that a more flexible preference and ranking model would better handle competing user needs.</p></div>
+ <p class="closing">The lesson I took away: in early-stage work, the fastest useful test usually beats the best data source.</p>
+ <div class="lastlinks"><a href="mailto:karanskhera@gmail.com?subject=Hello%20Karan%20%E2%80%94%20Monzy%20case%20study">Get in touch →</a><a href="https://www.linkedin.com/in/karanskhera/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="#intro">Back to intro ↑</a></div>
+</section>
+</main>
+<script>
+(()=>{
+ const navLinks=[...document.querySelectorAll('.rail a[data-track]')];
+ const ids=navLinks.map(a=>a.dataset.track);
+ let pending=false;
+ function sync(){
+  pending=false;
+  const marker=Math.max(92,Math.min(188,innerHeight*.26));
+  let active=ids[0];
+  ids.forEach(id=>{const el=document.getElementById(id);if(el && el.getBoundingClientRect().top <= marker)active=id});
+  if((innerHeight+scrollY >= document.documentElement.scrollHeight-8))active=ids.at(-1);
+  navLinks.forEach(a=>{const yes=a.dataset.track===active;a.classList.toggle('active',yes);if(yes)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
+  const bottom=document.documentElement.scrollHeight-innerHeight;
+  document.querySelector('#read-progress').style.width=(bottom?Math.min(100,scrollY/bottom*100):0)+'%';
+ }
+ addEventListener('scroll',()=>{if(!pending){pending=true;requestAnimationFrame(sync)}},{passive:true});
+ addEventListener('resize',sync);addEventListener('hashchange',()=>setTimeout(sync,120));sync();
+ const data=[
+  {title:'What would you use a card for most?',label:'Start with purpose',opts:[['travel','Travel','Flights, hotels and airport benefits'],['shopping','Shopping','Online purchases and everyday rewards'],['bills','Everyday expenses','Fuel, utilities and essentials']]},
+  {title:'What matters most within that?',label:'Specify the benefit',dynamic:true},
+  {title:'How do you feel about an annual fee?',label:'Apply constraints',opts:[['free','Prefer no annual fee','Keep the recurring cost low'],['paid','Open to a fee','If the expected value justifies it']]},
+  {title:'Which rewards do you prefer?',label:'Clarify how value is earned',opts:[['cashback','Cashback','Simple statement or transaction savings'],['points','Points or miles','Value through later redemption']]},
+  {title:'Would you use this card for UPI?',label:'Check payment compatibility',opts:[['yes','Yes','UPI support is important'],['no','Not a priority','Other benefits matter more']]}
+ ];
+ const specific={travel:[['lounge','Lounge access','Airport benefits'],['miles','Airline miles','Flight rewards'],['forex','Low forex charges','Spend overseas']],shopping:[['online','Online shopping','Marketplaces and retail'],['food','Food delivery','Dining and delivery'],['flex','Broad cashback','Across merchants']],bills:[['fuel','Fuel','Fuel spending'],['grocery','Groceries','Essentials'],['utilities','Utility bills','Regular payments']]};
+
+  // Illustrative card examples. Verify live issuer terms before making any real recommendation.
+  // The available combinations (3 × 3 × 2 × 2 × 2) are always handled, including sparse intersections.
+  const cardPool=[
+    {name:'Kiwi RuPay Credit Card',issuer:'Multiple issuers',free:true,upi:true,reward:'cashback',focus:['shopping','food','flex','online']},
+    {name:'Axis Bank Fibe RuPay',issuer:'Axis Bank',free:true,upi:true,reward:'cashback',focus:['food','shopping','online']},
+    {name:'YES Bank FinBooster RuPay',issuer:'YES Bank',free:true,upi:true,reward:'points',focus:['shopping','online','flex']},
+    {name:'YES Bank RuPay Credit Card',issuer:'YES Bank',free:true,upi:true,reward:'points',focus:['flex','grocery','utilities']},
+    {name:'AU KOSMO Credit Card',issuer:'AU Bank',free:true,upi:true,reward:'points',focus:['fuel','grocery','flex']},
+    {name:'Flex by Google Pay (Axis)',issuer:'Axis Bank',free:true,upi:true,reward:'points',focus:['shopping','online','flex']},
+    {name:'AU SPONT Credit Card',issuer:'AU Bank',free:false,upi:true,reward:'cashback',focus:['shopping','flex','grocery']},
+    {name:'IDFC FIRST EA₹N',issuer:'IDFC FIRST Bank',free:false,upi:true,reward:'cashback',focus:['shopping','online','flex']},
+    {name:'HDFC UPI RuPay Credit Card',issuer:'HDFC Bank',free:false,upi:true,reward:'points',focus:['flex','grocery','utilities']},
+    {name:'FIRST Power',issuer:'IDFC FIRST Bank',free:false,upi:true,reward:'points',focus:['fuel','utilities','grocery']},
+    {name:'Amazon Pay ICICI Credit Card',issuer:'ICICI Bank',free:true,upi:false,reward:'cashback',focus:['shopping','online','flex']},
+    {name:'AU Bank LIT Credit Card',issuer:'AU Bank',free:true,upi:false,reward:'points',focus:['shopping','online','flex']},
+    {name:'BOBCARD ETERNA',issuer:'BOBCARD',free:true,upi:false,reward:'points',focus:['travel','lounge','miles','food']},
+    {name:'BOBCARD PREMIER',issuer:'BOBCARD',free:true,upi:false,reward:'points',focus:['travel','food','miles']},
+    {name:'Axis Bank ATLAS Credit Card',issuer:'Axis Bank',free:false,upi:false,reward:'points',focus:['travel','miles','lounge','forex']},
+    {name:'American Express Platinum Travel',issuer:'American Express',free:false,upi:false,reward:'points',focus:['travel','lounge','miles']},
+    {name:'Airtel Axis Bank Credit Card',issuer:'Axis Bank',free:false,upi:false,reward:'cashback',focus:['utilities','food','grocery']},
+    {name:'BPCL SBI Card',issuer:'SBI Card',free:false,upi:false,reward:'points',focus:['fuel','grocery','flex']},
+    {name:'SBI Cashback Credit Card',issuer:'SBI Card',free:false,upi:false,reward:'cashback',focus:['shopping','online','flex']},
+    {name:'American Express SmartEarn',issuer:'American Express',free:false,upi:false,reward:'points',focus:['shopping','online','food']}
+  ];
+  function pickSampleCards(a){
+    // Respect the visitor's strict constraints (fee and UPI), then favour preference overlap.
+    let pool=cardPool.filter(c=>(a[2]!=='free'||c.free)&&(a[4]!=='yes'||c.upi));
+    // Visitors open to fees may still discover no-fee options.
+    const score=c=>(c.focus.includes(a[1])?4:0)+(c.focus.includes(a[0])?2:0)+(c.reward===a[3]?2:0)+(a[2]==='paid'&&!c.free?1:0);
+    const shuffled=pool.map(c=>({c,s:score(c),tie:Math.random()})).sort((x,y)=>y.s-x.s||x.tie-y.tie);
+    return shuffled.slice(0,3).map(x=>x.c);
+  }
+
+ const answers=Array(5).fill(null);let step=0,complete=false;
+ const host=document.getElementById('demo-question'),prev=document.getElementById('demo-prev'),next=document.getElementById('demo-next');
+ function render(){
+  const config=data[step],opts=config.dynamic?(specific[answers[0]]||specific.shopping):config.opts;
+  document.getElementById('demo-step').textContent=complete?'YOUR PREFERENCE SIGNALS':`QUESTION ${step+1} OF 5`;
+  document.getElementById('demo-status').textContent=complete?'Review':config.label;
+  document.getElementById('demo-fill').style.width=(complete?100:(step+1)*20)+'%';
+  host.replaceChildren();
+  if(complete){
+   const h=document.createElement('h3');h.className='demo-q';h.textContent='What the answers tell us';host.appendChild(h);
+    const fee=answers[2]==='free'?'a card without an annual fee':'a card whose benefits justify its annual fee';
+    const reward=answers[3]==='cashback'?'cashback':'points or miles';
+    const selectedFocus=(specific[answers[0]]||specific.shopping).find(x=>x[0]===answers[1]);
+    const focus=selectedFocus?selectedFocus[1].toLowerCase():'your preferred spending category';
+    const network=answers[4]==='yes'?', with a RuPay option for eligible UPI payments':'';
+    const profile=document.createElement('p');profile.className='demo-hint';profile.style.color='var(--ink)';profile.style.fontWeight='600';profile.textContent=`Card profile to explore: ${fee} with ${reward} benefits for ${focus}${network}.`;host.appendChild(profile);
+    const p=document.createElement('p');p.className='demo-hint';p.textContent='Below are real card names from the Monzy catalogue, selected illustratively. They are not scored, ranked or verified matches for your profile. Check current fees, benefits, eligibility and restrictions on Monzy.';host.appendChild(p);
+    const list=document.createElement('ul');list.className='summary-list';
+    answers.forEach((a,i)=>{const opts=data[i].dynamic?specific[answers[0]]:data[i].opts;const v=opts.find(x=>x[0]===a);if(v){const li=document.createElement('li');li.textContent=v[1];list.appendChild(li)}});
+    host.appendChild(list);
+    const section=document.createElement('div');section.className='card-examples';
+    const heading=document.createElement('h4');heading.textContent='Three cards worth comparing';section.appendChild(heading);
+    const sub=document.createElement('p');sub.className='card-subtext';sub.textContent='Examples rotate between runs. Availability and rewards may change. These are demonstrations of preference filtering, not personal financial advice.';section.appendChild(sub);
+    const grid=document.createElement('div');grid.className='card-example-list';
+    pickSampleCards(answers).forEach(c=>{const item=document.createElement('div');item.className='card-example';const name=document.createElement('strong');name.textContent=c.name;const details=document.createElement('span');details.textContent=`${c.issuer} · ${c.free?'No stated annual fee':'Annual fee applies'}${c.upi?' · RuPay':''}`;item.append(name,details);grid.appendChild(item)});
+    section.appendChild(grid);host.appendChild(section);
+    next.textContent='Start again ↻';next.disabled=false;prev.disabled=false;
+  }else{
+   const h=document.createElement('h3');h.className='demo-q';h.textContent=config.title;host.appendChild(h);
+   const hint=document.createElement('p');hint.className='demo-hint';hint.textContent='Choose one answer to continue.';host.appendChild(hint);
+   const grid=document.createElement('div');grid.className='demo-choices';grid.setAttribute('role','group');grid.setAttribute('aria-label',config.title);
+   opts.forEach(([key,title,sub])=>{const b=document.createElement('button');b.className='choice';b.type='button';b.setAttribute('aria-pressed',String(answers[step]===key));const t=document.createElement('strong');t.textContent=title;const s=document.createElement('span');s.textContent=sub;b.append(t,s);b.addEventListener('click',()=>{if(step===0 && answers[0]!==key)answers[1]=null;answers[step]=key;grid.querySelectorAll('button').forEach(btn=>btn.setAttribute('aria-pressed',String(btn===b)));next.disabled=false});grid.appendChild(b)});
+   host.appendChild(grid);next.textContent=step===4?'Review answers →':'Continue →';next.disabled=answers[step]==null;prev.disabled=step===0;
+  }
+ }
+ next.addEventListener('click',()=>{if(complete){answers.fill(null);step=0;complete=false}else if(answers[step]!==null){if(step===4)complete=true;else step++}render()});
+ prev.addEventListener('click',()=>{if(complete){complete=false;step=4}else if(step>0)step--;render()});
+ render();
+})();
+</script>
+</body>
+</html>

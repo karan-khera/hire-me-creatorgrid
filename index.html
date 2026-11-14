@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f6f9ff">
+<meta name="description" content="Karan Khera's note to Izzy and Ali about the CreatorGrid Founder's Associate role: four reasons, three case studies and notes from colleagues.">
+<meta property="og:title" content="For Izzy & Ali | Karan Khera × CreatorGrid">
+<meta property="og:description" content="Why I think I could be useful to the CreatorGrid team. Three projects and the people behind the work.">
+<meta property="og:type" content="website">
+<title>For Izzy & Ali | Karan Khera — CreatorGrid</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--blue:#2459a8;--navy:#142f58;--ink:#1a2d48;--text:#334b68;--muted:#637894;--line:#dbe5f1;--wash:#f7faff;--lighter:#edf4ff;--white:#fff;--serif:'Instrument Serif',Georgia,'Times New Roman',serif;--sans:'DM Sans',Inter,system-ui,-apple-system,'Segoe UI',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--wash);font:16px/1.67 var(--sans);-webkit-font-smoothing:antialiased}a{color:var(--blue);text-underline-offset:4px}a:hover{text-decoration-thickness:2px}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible{outline:3px solid #3177de;outline-offset:4px;border-radius:3px}::selection{background:#c8deff}
+.wide{width:min(1160px,calc(100% - 84px));margin:auto}.site-header{height:81px;display:flex;justify-content:space-between;align-items:center;gap:24px;border-bottom:1px solid var(--line)}.brand{font-weight:700;letter-spacing:-.025em;color:var(--navy);text-decoration:none;font-size:17px;display:inline-flex;align-items:center;gap:11px}.brand-photo{width:40px;height:40px;flex:0 0 40px;display:inline-flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#c7daf6,#e3edfd);border:1px solid #bad0eb;border-radius:7px;overflow:hidden;font-size:11px;letter-spacing:.06em;color:var(--navy)}.brand-photo img{width:100%;height:100%;object-fit:cover;display:block}.nav{display:flex;align-items:center;gap:27px}.nav a{font-size:13px;font-weight:600;text-decoration:none;color:var(--text)}.nav a:hover{color:var(--blue)}.nav .nav-contact{color:var(--blue)}
+.hero{padding:87px 0 82px;position:relative}.hello{display:flex;align-items:center;gap:9px;font-size:12px;text-transform:uppercase;letter-spacing:.12em;font-weight:700;color:var(--blue)}.hello:before{content:'';width:21px;height:2px;background:var(--blue)}h1,h2,h3,p{margin-top:0}h1{font:400 clamp(55px,7.2vw,99px)/.99 var(--serif);letter-spacing:-.027em;color:var(--navy);margin:27px 0 24px;max-width:1030px}h1 .name{color:var(--blue);font-style:italic}h1 .lower{font-size:.78em;line-height:1.12;color:#203b68;display:block;margin-top:13px}.intro{font-size:clamp(18px,2vw,21px);line-height:1.75;color:var(--text);max-width:790px;margin:25px 0 20px}.intro strong{color:var(--navy);font-weight:700}.hero-anchors{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:31px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid var(--blue);border-radius:5px;background:var(--blue);color:white;text-decoration:none;font-size:14px;font-weight:700;padding:13px 20px;min-height:47px;transition:background .16s,transform .16s}.btn:hover{background:#194d9f;transform:translateY(-1px)}.ghost{border-color:#b4cae8;background:transparent;color:var(--blue)}.ghost:hover{background:#eaf2ff}.minor{font-size:12px;color:var(--muted)}.scribble{position:absolute;right:30px;top:78px;width:116px;height:120px;opacity:.76;pointer-events:none}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--blue);font-weight:700;margin-bottom:14px}.section{padding:74px 0;border-top:1px solid var(--line)}.section-title{font:400 clamp(39px,4.4vw,57px)/1.1 var(--serif);letter-spacing:-.02em;color:var(--navy);margin:0 0 17px}.section-dek{max-width:740px;color:var(--text);font-size:16px;line-height:1.8;margin-bottom:27px}
+.reason-controls{display:flex;gap:8px;justify-content:flex-end;align-items:center;margin:-50px 0 23px}.slider-arrow{border:1px solid #bfcee4;background:white;color:var(--navy);border-radius:50%;width:41px;height:41px;display:flex;align-items:center;justify-content:center;font-size:21px;line-height:1}.slider-arrow:hover:not(:disabled){background:#eaf2ff;border-color:#91add6}.slider-arrow:disabled{opacity:.38;cursor:default}.reasons-track{display:grid;grid-auto-flow:column;grid-auto-columns:min(64%,710px);gap:17px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-inline:1px;overscroll-behavior-x:contain;scrollbar-width:none;padding:3px 2px 16px}.reasons-track::-webkit-scrollbar{display:none}.reason-card{border:1px solid #d8e5f4;background:#fff;border-radius:9px;padding:27px 29px 34px;min-height:278px;scroll-snap-align:start;display:flex;flex-direction:column}.reason-card .reason-num{font:400 30px/1 var(--serif);color:var(--blue);margin-bottom:25px}.reason-card h3{font-size:19px;color:var(--navy);letter-spacing:-.02em;line-height:1.38;margin:0 0 12px;max-width:440px}.reason-card p{font-size:14px;line-height:1.8;color:var(--text);margin:0;max-width:500px}.dots{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:12px}.dot-btn{width:10px;height:10px;border-radius:50%;border:0;background:#c4d5eb;padding:0;transition:background .15s,transform .15s}.dot-btn[aria-current="true"]{background:var(--blue);transform:scale(1.26)}
+.interlude{padding:78px 0 84px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:#eaf2ff;overflow:hidden}.interlude-inner{max-width:1000px;margin:auto;display:grid;grid-template-columns:170px 1fr;gap:25px;align-items:start}.interlude-label{font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:#3e679a;font-weight:700;padding-top:14px}.interlude-line{height:2px;background:linear-gradient(90deg,var(--blue) 0%,#a8c4e7 76%,transparent 76%);width:130px;margin-top:13px;transform-origin:left}.interlude h2{font:400 clamp(29px,4vw,44px)/1.28 var(--serif);letter-spacing:-.018em;margin:0;color:var(--navy);max-width:770px}.interlude h2 em{color:#2e66ad;font-style:italic}.reveal-ready .interlude-inner{opacity:0;transform:translateY(25px);transition:transform .75s cubic-bezier(.2,.7,.2,1),opacity .75s}.reveal-ready .interlude.is-visible .interlude-inner{opacity:1;transform:translateY(0)}.reveal-ready .interlude-line{transform:scaleX(.06);transition:transform 1s .22s cubic-bezier(.2,.7,.2,1)}.reveal-ready .interlude.is-visible .interlude-line{transform:scaleX(1)}
+.work-intro{max-width:800px;margin-bottom:25px}.work-intro p{margin:0;font-size:15px;color:var(--text);line-height:1.75}.case-stack{display:flex;flex-direction:column;gap:18px}.case{display:grid;grid-template-columns:47% 1fr;min-height:255px;background:var(--white);border:1px solid #dce6f2;border-radius:9px;overflow:hidden;text-decoration:none;color:inherit;transition:box-shadow .18s,border-color .18s,transform .18s}.case:hover{border-color:#9ebee6;box-shadow:0 16px 30px rgba(31,74,127,.08);transform:translateY(-2px)}.case-art{position:relative;background:#eef4fe;min-height:245px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-right:1px solid var(--line)}.case-art img{width:100%;height:100%;object-fit:cover;object-position:top center;position:absolute;inset:0}.case-art:after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(30,81,150,.04);pointer-events:none}.case-copy{padding:31px 35px;display:flex;flex-direction:column;justify-content:center}.case-tag{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:var(--blue);font-weight:700;margin-bottom:10px}.case-title{font:400 34px/1.13 var(--serif);color:var(--navy);letter-spacing:-.016em;margin:0 0 13px}.case-desc{font-size:14px;color:var(--text);line-height:1.76;margin:0 0 15px}.case-fact{font-size:13px;font-weight:700;color:#2e537f;margin:0 0 16px}.case-link{font-size:13px;font-weight:700;color:var(--blue);margin-top:auto}.case-featured{min-height:300px}.case-featured .case-art{min-height:300px}.case-featured .case-title{font-size:40px}
+.notes-hero{display:grid;grid-template-columns:1fr 1fr;gap:21px}.testimonial{margin:0;background:#fff;border:1px solid var(--line);padding:20px;border-radius:8px;min-width:0}.testimonial blockquote{font:400 25px/1.33 var(--serif);color:var(--navy);margin:0 0 8px}.testimonial .name{font-size:13px;font-weight:700;color:var(--navy)}.testimonial .role{font-size:12px;color:var(--muted);margin-bottom:17px}.testimonial img{display:block;width:100%;height:auto;border:1px solid #e2e8f1;border-radius:5px;background:#fff}.notes-more-title{margin:44px 0 17px;font-size:13px;color:var(--text);font-weight:700}.notes-more{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;align-items:start}.small-note{margin:0;border:1px solid var(--line);background:#fff;padding:17px;border-radius:8px;min-width:0}.small-note.wide-note{grid-column:1/-1}.small-note figcaption{font-size:12px;font-weight:700;color:var(--text);margin:0 0 11px}.small-note img{display:block;width:100%;height:auto;max-width:100%;border-radius:4px}.notes-more .small-note:nth-last-child(1){align-self:start}
+.contact{background:#e9f2ff;padding:76px 0 83px}.contact-inner{max-width:870px}.contact-title{font:400 clamp(45px,5vw,65px)/1.1 var(--serif);letter-spacing:-.026em;margin:0 0 18px;color:var(--navy)}.contact-copy{max-width:630px;font-size:17px;color:var(--text);line-height:1.75;margin-bottom:25px}.contact-links{display:flex;gap:14px;flex-wrap:wrap;align-items:center}.contact-small{font-size:12px;color:var(--muted);margin-top:15px}.btn[aria-disabled="true"]{opacity:.53;cursor:not-allowed;pointer-events:none;background:transparent;color:var(--blue);border-style:dashed}.footer{padding:24px 0 37px;display:flex;align-items:center;justify-content:space-between;font-size:12px;color:var(--muted);gap:18px}.footer a{text-decoration:none;color:var(--blue)}
+@media(max-width:960px){.wide{width:min(100% - 50px,1160px)}.case{grid-template-columns:43% 1fr}.case-copy{padding:24px}.case-title{font-size:30px}.case-featured .case-title{font-size:34px}.interlude-inner{grid-template-columns:130px 1fr}.reason-card{min-height:310px}}
+@media(max-width:740px){.notes-more{grid-template-columns:1fr}.small-note.wide-note{grid-column:auto}}
+@media(max-width:640px){.wide{width:calc(100% - 34px)}.site-header{height:66px}.brand{font-size:15px;gap:8px}.brand-photo{width:34px;height:34px;flex-basis:34px}.nav{gap:14px}.nav a{font-size:11px}.nav a:nth-child(2){display:none}.hero{padding:53px 0 62px}h1{font-size:clamp(52px,11vw,74px);letter-spacing:-.025em}h1 .lower{font-size:.72em}.intro{font-size:17px}.section{padding:55px 0}.section-title{font-size:43px}.reason-controls{margin:-12px 0 15px}.reasons-track{grid-auto-columns:84%;gap:13px}.reason-card{padding:22px 20px 27px;min-height:330px}.reason-card h3{font-size:17px}.reason-card p{font-size:13px}.interlude{padding:58px 0}.interlude-inner{display:block}.interlude-label{padding-top:0;margin-bottom:21px}.interlude-line{margin-top:9px}.interlude h2{font-size:33px}.case{display:flex;flex-direction:column}.case-art,.case-featured .case-art{min-height:195px;height:195px;border-right:0;border-bottom:1px solid var(--line)}.case-copy{padding:24px}.case-title,.case-featured .case-title{font-size:32px}.notes-hero,.notes-more{grid-template-columns:1fr}.small-note.wide-note{grid-column:auto}.testimonial blockquote{font-size:23px}.notes-more-title{margin-top:32px}.contact{padding:60px 0 70px}.footer{flex-direction:column;align-items:flex-start;gap:5px}.minor{display:none}.scribble{display:none}}
+@media(max-width:360px){.wide{width:calc(100% - 28px)}.nav{gap:8px}.brand{font-size:13px}.section-title{font-size:39px}.hero h1{font-size:47px}.reasons-track{grid-auto-columns:88%}.reason-card{min-height:365px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.case,.btn,.reveal-ready .interlude-inner,.reveal-ready .interlude-line{transition:none!important}.reveal-ready .interlude-inner{opacity:1;transform:none}.reveal-ready .interlude-line{transform:none}}
+
+/* Selected Work — Option D: restrained, typography-led index */
+.project-index{border-top:1px solid #9fbbdd;margin-top:31px}
+.project-row{display:grid;grid-template-columns:73px minmax(0,1fr) 159px 24px;align-items:center;gap:29px;padding:37px 14px 39px 8px;border-bottom:1px solid #cedbec;text-decoration:none;color:var(--ink);transition:background .22s ease,padding .22s ease}
+.project-row:hover{background:rgba(222,234,253,.42);padding-left:17px}
+.project-row:focus-visible{outline-offset:-3px}
+.project-no{align-self:start;font:400 56px/.95 var(--serif);color:#95b1d5;letter-spacing:-.045em;font-variant-numeric:tabular-nums;padding-top:12px}
+.project-main{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.project-category{font-size:10px;line-height:1.45;text-transform:uppercase;letter-spacing:.13em;font-weight:700;color:#3264a6;margin:1px 0 8px}
+.project-title{font:400 clamp(25px,2.75vw,36px)/1.14 var(--serif);color:var(--navy);letter-spacing:-.015em;margin-bottom:11px}
+.project-description{font-size:14px;line-height:1.77;color:var(--text);max-width:545px}
+.project-visit{font-size:12px;font-weight:700;color:var(--blue);margin-top:15px}
+.project-metric{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;background:#e8f1fe;border-radius:11px;padding:17px 17px 19px;min-height:120px}
+.project-metric strong{font:400 43px/1.03 var(--serif);letter-spacing:-.02em;color:#153b70}
+.project-metric span{font-size:11px;line-height:1.4;color:#365b88;font-weight:600}
+.project-arrow{font-size:24px;color:#214d8a;align-self:start;padding-top:28px;transition:transform .18s ease}
+.project-row:hover .project-arrow{transform:translate(3px,-3px)}
+@media(max-width:960px){.project-row{grid-template-columns:58px minmax(0,1fr) 136px 18px;gap:17px;padding:29px 6px}.project-no{font-size:49px}.project-metric{padding:14px;min-height:105px}.project-metric strong{font-size:38px}.project-title{font-size:30px}}
+@media(max-width:640px){.project-index{margin-top:16px}.project-row{grid-template-columns:38px minmax(0,1fr) 20px;column-gap:14px;row-gap:15px;padding:27px 2px 29px}.project-row:hover{padding-left:7px}.project-no{grid-row:1/3;grid-column:1;font-size:35px;padding-top:6px}.project-main{grid-column:2;grid-row:1}.project-category{font-size:9px}.project-title{font-size:28px}.project-description{font-size:13px}.project-visit{margin-top:12px}.project-metric{grid-column:2;grid-row:2;min-height:0;padding:12px 16px;flex-direction:row;align-items:center;justify-content:flex-start;gap:14px;max-width:310px}.project-metric strong{font-size:34px}.project-metric span{font-size:11px;max-width:140px}.project-arrow{grid-column:3;grid-row:1;font-size:19px;padding-top:4px}}
+@media(max-width:360px){.project-row{grid-template-columns:34px minmax(0,1fr) 16px;gap:11px}.project-title{font-size:25px}.project-no{font-size:32px}.project-metric{padding:10px 12px}.project-metric strong{font-size:30px}}
+@media(prefers-reduced-motion:reduce){.project-row,.project-arrow{transition:none}}
+
+/* V5: restrained contrasting CTAs */
+.btn-book{background:#15191f;border-color:#15191f;color:#fff;box-shadow:0 3px 12px rgba(15,23,42,.09)}
+.btn-book:hover{background:#343c49;border-color:#343c49}
+.btn-email{background:#c9342d;border-color:#c9342d;color:#fff}
+.btn-email:hover{background:#a9241e;border-color:#a9241e}
+.gmail-mark{width:19px;height:19px;flex-shrink:0;background:white;padding:2px;border-radius:3px}
+/* V7: precise, quiet music control with Web Audio waveform and clear credit. */
+.music-dock{position:fixed;bottom:90px;right:max(22px,calc((100vw - 1160px)/2));z-index:90;font-family:var(--sans);width:min(365px,calc(100vw - 24px))}
+.music-shell{display:grid;grid-template-columns:46px minmax(0,1fr) 90px;gap:13px;align-items:center;min-height:84px;padding:14px 15px;background:rgba(255,255,255,.985);border:1px solid #dbe3eb;border-radius:16px;box-shadow:0 9px 36px rgba(22,45,76,.12),0 1px 3px rgba(22,45,76,.045);backdrop-filter:blur(12px)}
+.music-play{display:grid;place-items:center;width:46px;height:46px;border:0;border-radius:50%;background:#181818;color:white;cursor:pointer;flex-shrink:0;transition:transform .16s ease,background .16s ease}
+.music-play:hover{background:#333;transform:scale(1.035)}.music-play:focus-visible{outline:3px solid #8aaadb;outline-offset:3px}.music-play[aria-busy=true]{opacity:.65;cursor:progress}
+.music-play svg{width:18px;height:18px;fill:currentColor;display:block}
+/* More specific than .music-play svg: exactly one icon is visible. */
+.music-dock .music-play .music-icon-pause{display:none}
+.music-dock .music-play .music-icon-play{display:block}
+.music-dock[data-playing="true"] .music-play .music-icon-play{display:none}
+.music-dock[data-playing="true"] .music-play .music-icon-pause{display:block}
+.music-copy{min-width:0;display:flex;flex-direction:column;gap:3px}.music-track{color:#151b24;font-size:13px;line-height:1.22;font-weight:750;letter-spacing:-.018em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.music-artist{font-size:11px;color:#66768b;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.music-meta{font-size:9px;line-height:1.3;color:#70819a;min-height:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.music-meter{display:flex;align-items:center;justify-content:center;gap:1px;min-width:0;height:37px;padding-left:2px;border-left:1px solid #e9edf2}
+.music-meter canvas{width:80px;height:32px;display:block}
+.music-progress{height:2px;width:100%;background:#e8edf2;border-radius:5px;overflow:hidden;margin-top:3px}.music-progress span{display:block;height:100%;width:0%;background:#6480a6;transition:width .25s linear}
+@media(max-width:640px){.music-dock{right:12px;bottom:85px;width:min(340px,calc(100vw - 24px))}.music-shell{grid-template-columns:42px minmax(0,1fr) 76px;min-height:74px;gap:10px;padding:11px 12px;border-radius:14px}.music-play{width:42px;height:42px}.music-meter canvas{width:70px}.contact{padding-bottom:118px}}
+@media(prefers-reduced-motion:reduce){.music-play{transition:none}.music-progress span{transition:none}}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;clip-path:inset(50%)!important}
+</style>
+</head>
+<body>
+<div class="wide"><header class="site-header">
+<a class="brand" href="#top" aria-label="Back to the top of Karan's page"><span class="brand-photo" aria-hidden="true" title="Karan Khera"><img src="assets/karan-headshot.jpg" alt="" width="40" height="40"></span><span>Karan Khera</span></a>
+<nav class="nav" aria-label="On this page"><a href="#why">Why me</a><a href="#work">Selected work</a><a href="#notes">Colleague notes</a><a class="nav-contact" href="mailto:karanskhera@gmail.com?subject=CreatorGrid%20%E2%80%93%20hello">Email Karan ↗</a></nav>
+</header>
+<main id="top">
+<section class="hero" aria-labelledby="hero-heading">
+<div class="hello">A note for the CreatorGrid team</div>
+<h1 id="hero-heading">Hi <span class="name">Izzy &amp; Ali,</span><span class="lower">here’s why I think I’d be a great fit for the Founder’s Associate role.</span></h1>
+<p class="intro">You’re building a better way for creators and brands to work together. <strong>I’ve spent the last few years working across product, growth, operations and research</strong>, turning ambiguous ideas and commercial problems into plans, products and systems that teams can actually run.</p>
+<p class="intro" style="margin-top:0;font-size:17px;max-width:745px">This is a short note on how I work, three projects that might be relevant, and a few candid messages from people I’ve worked with.</p>
+<div class="hero-anchors"><a href="#why" class="btn">Why I think this fits <span aria-hidden="true">↓</span></a><a href="#work" class="btn ghost">Jump to the projects <span aria-hidden="true">↘</span></a></div>
+<svg class="scribble" viewBox="0 0 120 130" aria-hidden="true"><path d="M19 10 C76 -1,108 18,82 47 S23 75,61 95 S104 95,92 119" stroke="#80a8e9" stroke-width="2.3" fill="none" stroke-linecap="round" stroke-dasharray="5 9"/><path d="M81 108 L91 121 L104 110" fill="none" stroke="#5084ce" stroke-width="2" stroke-linecap="round"/></svg>
+</section>
+<section class="section" id="why" aria-labelledby="why-heading">
+<div class="eyebrow">01 / The fit</div><h2 class="section-title" id="why-heading">Four reasons I think I could be useful.</h2>
+<p class="section-dek">I’m not coming from a traditional creator agency. My experience is in the commercial, product and operating problems that show up when a promising idea starts to scale.</p>
+<div class="reason-controls" aria-label="Browse reasons"><button class="slider-arrow" type="button" id="reasons-prev" aria-label="Previous reason">←</button><button class="slider-arrow" type="button" id="reasons-next" aria-label="Next reason">→</button></div>
+<div class="reasons-track" id="reasons-track" tabindex="0" aria-label="Four reasons; scroll sideways to explore">
+<article class="reason-card" id="reason-1"><span class="reason-num">01</span><h3>I understand the brand side of creator partnerships.</h3><p>Good work has to serve three interests at once: the brand’s commercial goals, the audience’s experience and the economics of delivery. I’ve had to balance those trade-offs directly.</p></article>
+<article class="reason-card" id="reason-2"><span class="reason-num">02</span><h3>I can take a founder’s idea through its first hard decisions.</h3><p>I’m comfortable turning an untested hypothesis into research questions, choices, priorities and an MVP. Early-stage ambiguity doesn’t need to become slow execution.</p></article>
+<article class="reason-card" id="reason-3"><span class="reason-num">03</span><h3>I connect growth to the systems that make it repeatable.</h3><p>A successful campaign is useful. A way to run hundreds reliably is more valuable. I’ve worked on both the commercial side and the operating machinery behind it.</p></article>
+<article class="reason-card" id="reason-4"><span class="reason-num">04</span><h3>I take ownership without waiting for a perfect job description.</h3><p>I’ve worked across leadership, product, research, partnerships and operations. I’m comfortable asking difficult questions, coordinating the people involved and doing the detailed work myself.</p></article>
+</div>
+<div class="dots" id="reason-dots" aria-label="Choose a reason"><button class="dot-btn" type="button" data-reason="0" aria-label="Go to reason 1" aria-current="true"></button><button class="dot-btn" type="button" data-reason="1" aria-label="Go to reason 2" aria-current="false"></button><button class="dot-btn" type="button" data-reason="2" aria-label="Go to reason 3" aria-current="false"></button><button class="dot-btn" type="button" data-reason="3" aria-label="Go to reason 4" aria-current="false"></button></div>
+</section>
+</main></div>
+<section class="interlude" id="bridge" aria-label="Why this experience matters to CreatorGrid"><div class="wide interlude-inner"><div class="interlude-label">The connection<div class="interlude-line"></div></div><h2><em>Why that matters here:</em> CreatorGrid is making creator–brand work more repeatable through software and AI. I’ve seen what both sides of a partnership need, and I enjoy building the operational foundations that let a promising model scale.</h2></div></section>
+<div class="wide"><main>
+<section class="section" id="work" aria-labelledby="work-heading">
+<div class="eyebrow">02 / The evidence</div><h2 class="section-title" id="work-heading">Three projects, in a little more detail.</h2>
+<div class="work-intro"><p>Each case study covers the problem, my role, the people involved, the decisions we made and what changed. Open whichever looks most relevant.</p></div>
+<div class="project-index" aria-label="Selected case studies">
+<a class="project-row" href="brand-partnership/" aria-label="Read the FamPay brand partnerships case study">
+  <span class="project-no" aria-hidden="true">01</span>
+  <span class="project-main">
+    <span class="project-category">Brand Partnerships · FamPay Rewards</span>
+    <span class="project-title">A brand-partnership engine built to scale</span>
+    <span class="project-description">How we made offers more relevant to users while building the capacity to serve 100+ brand partners and run 150+ campaigns each month.</span>
+    <span class="project-visit">Read case study <span aria-hidden="true">↗</span></span>
+  </span>
+  <span class="project-metric"><strong>10×</strong><span>Partnership revenue growth</span></span>
+  <span class="project-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="project-row" href="revenue-growth/" aria-label="Read the Google Play Gift Cards revenue growth case study">
+  <span class="project-no" aria-hidden="true">02</span>
+  <span class="project-main">
+    <span class="project-category">Revenue Growth · Google Play Gift Cards</span>
+    <span class="project-title">Diagnosing the gap between interest and purchase</span>
+    <span class="project-description">Used user behaviour and funnel evidence to rethink discovery, targeting and repeat purchase, increasing adoption from 5% to 18%.</span>
+    <span class="project-visit">Read case study <span aria-hidden="true">↗</span></span>
+  </span>
+  <span class="project-metric"><strong>+47%</strong><span>Revenue increase</span></span>
+  <span class="project-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="project-row" href="product-strategy/" aria-label="Read the Monzy product strategy case study">
+  <span class="project-no" aria-hidden="true">03</span>
+  <span class="project-main">
+    <span class="project-category">Product Strategy · Monzy</span>
+    <span class="project-title">From a hypothesis to a credible first product</span>
+    <span class="project-description">Led user research and MVP trade-offs, then built the structured credit-card data and early decision logic for a new discovery service.</span>
+    <span class="project-visit">Read case study <span aria-hidden="true">↗</span></span>
+  </span>
+  <span class="project-metric"><strong>500+</strong><span>Cards in the data foundation</span></span>
+  <span class="project-arrow" aria-hidden="true">↗</span>
+</a>
+</div>
+</section>
+<section class="section" id="notes" aria-labelledby="notes-heading">
+<div class="eyebrow">03 / People I’ve worked with</div><h2 class="section-title" id="notes-heading">What’s it actually like to work with me?</h2>
+<p class="section-dek">I’ve left these as original messages, including the less polished bits. The first two are from my product and sales leaders; the others are from colleagues I worked closely with.</p>
+<div class="notes-hero">
+<figure class="testimonial"><blockquote>“You guys are on top of all campaigns.”</blockquote><div class="name">Peeyush</div><div class="role">Head of Sales · FamPay</div><img src="assets/peeyush-message.jpg" loading="lazy" alt="Peeyush's original message praising campaign ownership and proactive planning"></figure>
+<figure class="testimonial"><blockquote>“It’s all you man. Mission accomplished.”</blockquote><div class="name">Brijesh</div><div class="role">Head of Product · FamPay</div><img src="assets/brijesh-message.jpg" loading="lazy" alt="Brijesh's original message crediting Karan and the team for the campaign outcome"></figure>
+</div>
+<h3 class="notes-more-title">A few more notes from teammates</h3>
+<div class="notes-more">
+<figure class="small-note wide-note"><figcaption>Ayezah · On inclusive leadership</figcaption><img src="assets/ayezah-message.jpg" loading="lazy" alt="Original note from Ayezah about empathy and including team members"></figure>
+<figure class="small-note"><figcaption>Nandini · On trust and growth</figcaption><img src="assets/nandini-message.jpg" loading="lazy" alt="Original note from Nandini about mentorship and helping colleagues develop"></figure>
+<figure class="small-note"><figcaption>Ratik · On structure and problem solving</figcaption><img src="assets/ratik-message.jpg" loading="lazy" alt="Original note from Ratik about organisation, problem solving and warmth"></figure>
+<figure class="small-note"><figcaption>Saatvik · On leadership and advice</figcaption><img src="assets/saatvik-message.jpg" loading="lazy" alt="Original note from Saatvik thanking Karan for advice and guidance"></figure>
+
+</div>
+</section>
+</main></div>
+<section class="contact" id="contact"><div class="wide contact-inner"><div class="eyebrow">04 / Say hello</div><h2 class="contact-title">If this sounds relevant, I’d love to talk.</h2><p class="contact-copy">I’d enjoy hearing more about where CreatorGrid needs the most help and how I could contribute. Thanks for taking the time to look through my work.</p><div class="contact-links"><a class="btn btn-book" id="book-slot" href="https://cal.com/karank/30min" target="_blank" rel="noopener noreferrer">Book a slot <span aria-hidden="true">↗</span></a><a href="mailto:karanskhera@gmail.com?subject=CreatorGrid%20Founders%20Associate%20%E2%80%93%20hello" class="btn btn-email"><svg class="gmail-mark" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="#4285F4" d="M1.8 5.2v13.2c0 .7.5 1.2 1.2 1.2h2.3V9.4z"/><path fill="#34A853" d="M18.7 9.4v10.2H21c.7 0 1.2-.5 1.2-1.2V5.2z"/><path fill="#EA4335" d="m5.3 9.4 6.7 4.9 6.7-4.9V5.1L12 10 5.3 5.1z"/><path fill="#C5221F" d="M1.8 5.2 5.3 8V4.2L3.8 3C2.7 2.3 1.8 3.1 1.8 4.3z"/><path fill="#FBBC04" d="M18.7 4.2V8l3.5-2.8v-.9c0-1.2-.9-2-2-1.3z"/></svg>Email Karan <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/karanskhera/" class="btn ghost" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></div></div></section>
+
+<!-- Optional music: source is a locally hosted, licensed audio file. The bundled fallback
+     is an original sample, NOT the requested recording; README has one-step replacement. -->
+<aside class="music-dock" id="music-dock" data-playing="false" aria-label="Optional background music">
+  <audio id="cafe-music" preload="none" loop></audio>
+  <div class="music-shell">
+    <button type="button" class="music-play" id="music-toggle" aria-label="Play background music" aria-pressed="false" aria-busy="false" title="Play or pause">
+      <svg class="music-icon-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4.8a1 1 0 0 1 1.5-.86l11 7.2a1 1 0 0 1 0 1.72l-11 7.2A1 1 0 0 1 7 19.2V4.8Z"/></svg>
+      <svg class="music-icon-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="4.5" width="4.5" height="15" rx="1"/><rect x="13.5" y="4.5" width="4.5" height="15" rx="1"/></svg>
+    </button>
+    <div class="music-copy">
+      <strong class="music-track" id="music-track">Rest Is Part of Work</strong>
+      <span class="music-artist" id="music-artist">Instrumental</span>
+      <span class="music-meta" id="music-meta">Checking audio…</span>
+      <div class="music-progress" aria-hidden="true"><span id="music-fill"></span></div>
+    </div>
+    <div class="music-meter" aria-hidden="true"><canvas id="music-canvas" width="160" height="64"></canvas></div>
+  </div>
+  <span role="status" class="sr-only" id="music-status" aria-live="polite"></span>
+</aside>
+<footer class="wide footer"><span>© Karan Khera · Selected work for CreatorGrid</span><span><a href="#top">Back to top ↑</a></span></footer>
+<script>
+(function(){
+  const track=document.getElementById('reasons-track'),cards=[...track.querySelectorAll('.reason-card')],dots=[...document.querySelectorAll('.dot-btn')],prev=document.getElementById('reasons-prev'),next=document.getElementById('reasons-next');let current=0;
+  function getIndex(){if(track.scrollLeft>=track.scrollWidth-track.clientWidth-5)return cards.length-1;let idx=0,best=Infinity;cards.forEach((card,i)=>{const d=Math.abs(track.scrollLeft-card.offsetLeft+track.offsetLeft);if(d<best){best=d;idx=i}});return idx}
+  function sync(){current=getIndex();dots.forEach((d,i)=>d.setAttribute('aria-current',String(i===current)));prev.disabled=current===0;next.disabled=current===cards.length-1}
+  function go(i){i=Math.min(cards.length-1,Math.max(0,i));track.scrollTo({left:cards[i].offsetLeft-track.offsetLeft,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});current=i;dots.forEach((d,j)=>d.setAttribute('aria-current',String(j===i)));prev.disabled=i===0;next.disabled=i===cards.length-1}
+  let raf=0;track.addEventListener('scroll',()=>{cancelAnimationFrame(raf);raf=requestAnimationFrame(sync)},{passive:true});window.addEventListener('resize',sync);dots.forEach((b,i)=>b.addEventListener('click',()=>go(i)));prev.addEventListener('click',()=>go(current-1));next.addEventListener('click',()=>go(current+1));sync();
+  const bridge=document.querySelector('.interlude');if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){document.documentElement.classList.add('reveal-ready');const observer=new IntersectionObserver(items=>items.forEach(item=>{if(item.isIntersecting){bridge.classList.add('is-visible');observer.disconnect()}}),{threshold:.22});observer.observe(bridge)}
+
+})();
+
+(function(){
+  const dock=document.getElementById('music-dock');
+  const audio=document.getElementById('cafe-music');
+  const btn=document.getElementById('music-toggle');
+  const title=document.getElementById('music-track');
+  const artist=document.getElementById('music-artist');
+  const meta=document.getElementById('music-meta');
+  const progress=document.getElementById('music-fill');
+  const status=document.getElementById('music-status');
+  const canvas=document.getElementById('music-canvas');
+  const ctx=canvas.getContext('2d');
+  const WANT='assets/music/rest-is-part-of-work.mp3';
+  const DEMO='assets/music/cafe-afterhours.mp3';
+  let demo=false,ready=false,webAudio=null,source=null,analyser=null,bins=null,raf=0;
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+  function metadata(){
+    if(demo){
+      title.textContent='Café Afterhours (Sample)';
+      artist.textContent='Original demo instrumental';
+      meta.textContent='Sample audio · add your MP3 to replace';
+    } else {
+      title.textContent='Rest Is Part of Work';
+      artist.textContent='Instrumental';
+      meta.textContent='Music off · tap to play';
+    }
+    btn.disabled=false;
+    btn.setAttribute('aria-busy','false');
+    ready=true;
+  }
+  function selectAudio(){
+    // Try the exact filename first, including when opened as a local file:// site.
+    // Fall back to an explicitly labelled demo, never silently mislabelling the sample.
+    function found(){
+      audio.removeEventListener('error',missing);
+      demo=false;
+      metadata();
+    }
+    function missing(){
+      audio.removeEventListener('loadedmetadata',found);
+      demo=true;
+      audio.addEventListener('loadedmetadata',metadata,{once:true});
+      audio.addEventListener('error',()=>{
+        btn.disabled=true;
+        meta.textContent='Audio file unavailable';
+        status.textContent='No audio available';
+      },{once:true});
+      audio.src=DEMO;
+      audio.load();
+    }
+    audio.addEventListener('loadedmetadata',found,{once:true});
+    audio.addEventListener('error',missing,{once:true});
+    audio.preload='metadata';
+    audio.src=WANT;
+    audio.load();
+  }
+  function setPlaying(v){
+    dock.dataset.playing=String(v);
+    btn.setAttribute('aria-label',v?'Pause background music':'Play background music');
+    btn.setAttribute('aria-pressed',String(v));
+    status.textContent=v?'Background music playing':'Background music paused';
+    if(v){meta.textContent=demo?'Sample playing':'Playing · tap to pause';draw();}
+    else {meta.textContent=demo?'Sample audio · add your MP3 to replace':'Music off · tap to play';cancelAnimationFrame(raf);drawIdle();}
+  }
+  function makeGraph(){
+    if(webAudio||!window.AudioContext && !window.webkitAudioContext)return;
+    const AudioCtx=window.AudioContext||window.webkitAudioContext;
+    webAudio=new AudioCtx();source=webAudio.createMediaElementSource(audio);
+    analyser=webAudio.createAnalyser();analyser.fftSize=512;analyser.smoothingTimeConstant=.77;
+    bins=new Uint8Array(analyser.frequencyBinCount);
+    source.connect(analyser);analyser.connect(webAudio.destination);
+  }
+  function paint(arr){
+    if(!ctx)return;
+    const width=canvas.width,height=canvas.height;
+    ctx.clearRect(0,0,width,height);
+    const n=arr.length,bar=3.7,gap=2.45,total=n*bar+(n-1)*gap,x0=(width-total)/2;
+    for(let i=0;i<n;i++){
+      const h=Math.max(3,Math.min(height-5,arr[i]));
+      ctx.fillStyle=(dock.dataset.playing==='true')?'#375b8b':'#a5b6ce';
+      ctx.beginPath();ctx.roundRect(x0+i*(bar+gap),(height-h)/2,bar,h,1.9);ctx.fill();
+    }
+  }
+  const idle=[4,7,5,9,6,11,7,5,8,5,9,6,4,7,5,9,6,5,8,4,6,5,4];
+  function drawIdle(){paint(idle);}
+  function draw(){
+    cancelAnimationFrame(raf);
+    if(audio.paused||reduce.matches){drawIdle();return;}
+    if(analyser){
+      analyser.getByteFrequencyData(bins);
+      const bars=[];
+      for(let i=0;i<23;i++){
+        const low=Math.floor(2*Math.pow(1.13,i));
+        const hi=Math.min(bins.length-1,Math.max(low+1,Math.floor(2*Math.pow(1.13,i+1))));
+        let total=0;for(let j=low;j<hi;j++)total+=bins[j];
+        const v=total/(hi-low);
+        bars.push(3+Math.pow(v/255,.83)*47);
+      }
+      paint(bars);
+    }else drawIdle();
+    raf=requestAnimationFrame(draw);
+  }
+  btn.disabled=true;btn.setAttribute('aria-busy','true');drawIdle();selectAudio();
+  btn.addEventListener('click',async()=>{
+    if(!ready)return;
+    if(!audio.paused){audio.pause();return;}
+    try{
+      makeGraph();
+      if(webAudio&&webAudio.state==='suspended')await webAudio.resume();
+      await audio.play();
+    }catch(e){meta.textContent='Playback unavailable';status.textContent='Audio could not play';setPlaying(false);}
+  });
+  audio.addEventListener('playing',()=>setPlaying(true));
+  audio.addEventListener('pause',()=>setPlaying(false));
+  audio.addEventListener('timeupdate',()=>{const t=audio.duration?audio.currentTime/audio.duration*100:0;progress.style.width=t+'%';});
+  audio.addEventListener('error',()=>{meta.textContent='Audio unavailable';status.textContent='Audio could not be loaded';setPlaying(false);});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden&&!audio.paused)audio.pause();});
+  reduce.addEventListener?.('change',()=>{if(reduce.matches){cancelAnimationFrame(raf);drawIdle();}else if(!audio.paused)draw();});
+})();
+</script>
+</body></html>

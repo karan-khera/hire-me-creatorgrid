@@ -37,7 +37,7 @@ body.portfolio-home {
 .portfolio-home .reason-card .reason-num {color:var(--highlight-ink)}
 .portfolio-home .dot-btn[aria-current=true] {background:var(--highlight-ink)}
 .portfolio-home .btn {font-size:14px}
-.portfolio-home .btn:not(.btn-email):not(.btn-book):not(.ghost) {background:var(--hero);border-color:var(--hero)}
+.portfolio-home .btn:not(.btn-email):not(.btn-book):not(.ghost):not(.btn-linkedin) {background:var(--hero);border-color:var(--hero)}
 .portfolio-home .ghost {color:var(--hero);border-color:#b8d2dc}
 .portfolio-home .ghost:hover {background:#e9f5f9}
 .portfolio-home .interlude {background:#eaf5f8}
@@ -230,3 +230,7 @@ html.embedded-page .music-dock {display:none!important}
   border-color:#004182;
   color:#fff;
 }
+
+/* Permanent LinkedIn brand button: isolated from generic buttons and ghost styles. */
+.portfolio-home .contact-links a.btn-linkedin{background-color:#0A66C2;border-color:#0A66C2;color:#fff}
+.portfolio-home .contact-links a.btn-linkedin:hover{background-color:#004182;border-color:#004182;color:#fff}

@@ -218,3 +218,15 @@ html.embedded-page .music-dock {display:none!important}
 @media(prefers-reduced-motion:reduce){
   .music-play,.music-progress span {transition:none}
 }
+/* LinkedIn CTA: use its recognizable brand blue, without affecting the outline project CTA. */
+.portfolio-home .contact-links a[href*="linkedin.com"] {
+  background:#0A66C2;
+  border-color:#0A66C2;
+  color:#fff;
+}
+.portfolio-home .contact-links a[href*="linkedin.com"]:hover,
+.portfolio-home .contact-links a[href*="linkedin.com"]:focus-visible {
+  background:#004182;
+  border-color:#004182;
+  color:#fff;
+}
